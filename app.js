@@ -1,12 +1,9 @@
 //caching the DOM elements
-// const year = document.getElementById("year");
-// const month = document.getElementById("month");
+
 // const gender = document.getElementById("gender");
-// const button = document.getElementById("submit");
+const button = document.getElementById("submit");
 //variable initilization
 
-var mm = null;
-var dd = null;
 //function to get the cc/centuary details
 //the function gets the two first digits of a number
 const cc = (y) => {
@@ -22,7 +19,7 @@ const cc = (y) => {
 const yy = (y) => {
   let convert = y.toString();
   let sec = convert.split("")[2] + convert.split("")[3];
-  let num = Number(sec);
+  let num = parseInt(sec, 10);
   return num;
 };
 // console.log(yy(1978));
@@ -33,4 +30,24 @@ const getDay = (cc, yy, mm, dd) => {
     (cc / 4 - 2 * cc - 1 + (5 * yy) / 4 + (26 * (mm + 1)) / 10 + dd) % 7
   );
 };
-console.log(getDay(cc(1943), yy(1943), 2, 17));
+const year = document.getElementById("year");
+const month = document.getElementById("month");
+button.addEventListener("click", function (e) {
+  var first = cc(year.value);
+  var second = yy(year.value);
+  var third = month.value;
+  if (getDay(first, second, third, 17) === 0) return console.log("sunday");
+  if (getDay(first, second, third, 17) === 1) return console.log("monday");
+  if (getDay(first, second, third, 17) === 2) return console.log("tuesday");
+  if (getDay(first, second, third, 17) === 3) return console.log("wednesday");
+  if (getDay(first, second, third, 17) === 4) return console.log("thursday");
+  if (getDay(first, second, third, 17) === 5) return console.log("friday");
+  if (getDay(first, second, third, 17) === 6) return console.log("saturday");
+  else {
+    return console.log("error");
+  }
+  //   console.log(cc(year.value));
+  //   console.log(yy(year.value));
+
+  //   event.preventDefault();
+});
