@@ -4,17 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akan-names</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-primary">
-    <div class="container">
-      <h1 class="text-light text-center mt-5">
-        Calculate the day you were born
-      </h1>
+    <nav class="nav navbar bg-dark">
+      <div class="navbar-brand py-3 text-xl text-light">
+        Akan names Generator
+      </div>
+    </nav>
+    <div class="bg-white px-3 d-flex justify-content-center">
+      <div class="w-50 text-center pt-5">
+        <h1 class="text-info text-center mt-5 text-wrap">
+          Find out your Akan Name and your Birth day with us fill out the form
+          below with your birthday details and get the results
+        </h1>
+      </div>
+      <div class="w-50">
+        <img src="images/undraw_online_information_4ui6.png" class="w-75" />
+      </div>
     </div>
+    <div class="section-form px-5">
+      <div class='w-50 mt-5 py-4'>
+          <h3 class='text-warning mb-3'>
+              Fill in the form to find out your Akan Name
+          </h3>
+        <form class='w-75'>
+          <div class="form-group">
+            <label>Year of birth</label>
+            <input
+              type="number"
+              class="form-control"
+              id="year"
+             
+            />
+            
+          </div>
+          <div class="form-group">
+            <label>Birth month</label>
+            <input
+              type="number"
+              class="form-control"
+              id="month"
+            />
+          </div>
+          <div class="form-group">
+            <label>Your Gender</label>
+            <select class="form-control" id="gender">
+              <option>Male</option>
+              <option>Female</option>
+
+            </select>
+          </div>
+          <button type="submit" id='submit' class="btn btn-primary">Submit</button>
+          </div>
+         
+        </form>
+        <div class='w-50 mt-5 py-4'>
+            <h3 class='text-light text-center'>Your results will appear below</h3>
+            <div class="results bg-white w-100 rounded">
+                <h1>results</h1>
+            </div>
+      </div>
+      </div>
+      
+    </div>
+    <script src='app.js'/>
   </body>
 </html>
