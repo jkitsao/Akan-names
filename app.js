@@ -37,66 +37,92 @@ const date = document.getElementById("date");
 const gender = document.getElementById("gender");
 const akan = document.getElementById("akan");
 const dweek = document.getElementById("dweek");
+const greet = document.getElementById("greet");
 button.addEventListener("click", function (e) {
   var century = cc(year.value);
   var yearvalue = yy(year.value);
   var monthvalue = month.value;
   var datevalue = date.value;
   var gendervalue = gender.value;
-  // console.log();
+  // console.log(year.value.length);
   if (
-    century.length === 4 &&
-    yearvalue.length === 4 &&
+    year.value.length === 4 &&
     monthvalue > 0 &&
     monthvalue <= 12 &&
     datevalue > 0 &&
     datevalue <= 31
+    // true == true
   ) {
+    dweek.innerText = " ";
+    akanName.innerText = "";
     if (
       getDay(century, yearvalue, monthvalue, datevalue) === 0 &&
-      fifth === "Male"
+      gendervalue === "Male"
     ) {
-      result.innerText = "sunday";
-      akan.innerText = "Kwasi";
+      result.innerText = "you were born on a  sunday";
+      akan.innerText = "your Akan name is Kwasi";
+      greet.innerText = "hello there Kwasi";
+    } else if (gendervalue === "Female") {
+      akan.innerText = "your Akan name is Akosua";
+      greet.innerText = "hello there Akosua";
     }
-    akan.innerText = "Akosua";
-    if (getDay(century, yearvalue, monthvalue, datevalue) === 1) {
-      result.innerText = "monday";
-      akan.innerText = "Kwadwo";
-    }
-    akan.innerText = "Adwoa";
-    if (getDay(century, yearvalue, monthvalue, datevalue) === 2) {
-      result.innerText = "Tuesday";
-      akan.innerText = "Kwabena";
-    }
-    akan.innerText = "Abenna";
-    if (getDay(century, yearvalue, monthvalue, datevalue) === 3) {
-      result.innerText = "wednesday";
-      akan.innerText = "Kwaku";
-    }
-    akan.innerText = "Akua";
-    if (getDay(century, yearvalue, monthvalue, datevalue) === 4) {
-      result.innerText = "Thursday";
-      akan.innerText = "Yaw";
-    }
-    if (getDay(century, yearvalue, monthvalue, datevalue) === 5) {
-      result.innerText = "Friday";
-      akan.innerText = "Kofi";
-    }
-    if (getDay(century, yearvalue, monthvalue, datevalue) === 6) {
-      result.innerText = "Saturday";
-      akan.innerText = "Kwame";
-    } else {
-      return (result.innerText = "error");
-    }
-    //   console.log(cc(year.value));
-    //   console.log(yy(year.value));
 
-    //   event.preventDefault();
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 1) {
+      result.innerText = "you were born on a  monday";
+      akan.innerText = "your Akan name is Kwadwo";
+      greet.innerText = "hello there Kwadwo";
+    } else if (gendervalue === "Female") {
+      akan.innerText = "your Akan name is Adwoa";
+      greet.innerText = "hello there Adwoa";
+    }
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 2) {
+      result.innerText = "you were born on a  Tuesday";
+      akan.innerText = "your Akan name is Kwabena";
+      greet.innerText = "hello there Kwabena";
+    } else if (gendervalue === "Female") {
+      akan.innerText = "your Akan name is Abenaa";
+      greet.innerText = "hello there Abenaa";
+    }
+
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 3) {
+      result.innerText = "you were born on a  wednesday";
+      akan.innerText = "your Akan name is Kwaku";
+      greet.innerText = "hello there Kwaku";
+    } else if (gendervalue === "Female") {
+      akan.innerText = "your Akan name is Akua";
+      greet.innerText = "hello there Akua";
+    }
+
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 4) {
+      result.innerText = "you were born on a  Thursday";
+      akan.innerText = "your Akan name is Yaw";
+      greet.innerText = "hello there yaw";
+    } else if (gendervalue === "Female") {
+      akan.innerText = "your Akan name is Yaa";
+      greet.innerText = "hello there Yaa";
+    }
+
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 5) {
+      result.innerText = "you were born on a  Friday";
+      akan.innerText = "your Akan name is Kofi";
+      greet.innerText = "hello there Kofi";
+    } else if (gendervalue === "Female") {
+      akan.innerText = "your Akan name is Afua";
+      greet.innerText = "hello there Afua";
+    }
+
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 6) {
+      result.innerText = "you were born on a  Saturday";
+      akan.innerText = "your Akan name is Kwame";
+      greet.innerText = "hello there Kwame";
+    } else if (gendervalue === "Female") {
+      akan.innerText = "your Akan name is Ama";
+      greet.innerText = "hello there Ama";
+    }
   } else {
     const akanName = document.getElementById("akan-name");
     dweek.className = "text-danger";
-    dweek.innerText = "Please enter a valid input ";
+    dweek.innerText = "invalid input please check your input";
     result.innerText = "";
     akan.innerText = "";
     akanName.innerText = "";
