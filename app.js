@@ -5,7 +5,7 @@ const button = document.getElementById("submit");
 //variable initilization
 
 //function to get the cc/centuary details
-//the function gets the two first digits of a number
+//the function gets the two century digits of a number
 const cc = (y) => {
   let convert = y.toString();
   let sec = convert.split("")[0] + convert.split("")[1];
@@ -34,32 +34,71 @@ const year = document.getElementById("year");
 const month = document.getElementById("month");
 const result = document.getElementById("result");
 const date = document.getElementById("date");
-
+const gender = document.getElementById("gender");
+const akan = document.getElementById("akan");
+const dweek = document.getElementById("dweek");
 button.addEventListener("click", function (e) {
-  var first = cc(year.value);
-  var second = yy(year.value);
-  var third = month.value;
-  var fourth = date.value;
+  var century = cc(year.value);
+  var yearvalue = yy(year.value);
+  var monthvalue = month.value;
+  var datevalue = date.value;
+  var gendervalue = gender.value;
+  // console.log();
+  if (
+    century.length === 4 &&
+    yearvalue.length === 4 &&
+    monthvalue > 0 &&
+    monthvalue <= 12 &&
+    datevalue > 0 &&
+    datevalue <= 31
+  ) {
+    if (
+      getDay(century, yearvalue, monthvalue, datevalue) === 0 &&
+      fifth === "Male"
+    ) {
+      result.innerText = "sunday";
+      akan.innerText = "Kwasi";
+    }
+    akan.innerText = "Akosua";
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 1) {
+      result.innerText = "monday";
+      akan.innerText = "Kwadwo";
+    }
+    akan.innerText = "Adwoa";
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 2) {
+      result.innerText = "Tuesday";
+      akan.innerText = "Kwabena";
+    }
+    akan.innerText = "Abenna";
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 3) {
+      result.innerText = "wednesday";
+      akan.innerText = "Kwaku";
+    }
+    akan.innerText = "Akua";
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 4) {
+      result.innerText = "Thursday";
+      akan.innerText = "Yaw";
+    }
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 5) {
+      result.innerText = "Friday";
+      akan.innerText = "Kofi";
+    }
+    if (getDay(century, yearvalue, monthvalue, datevalue) === 6) {
+      result.innerText = "Saturday";
+      akan.innerText = "Kwame";
+    } else {
+      return (result.innerText = "error");
+    }
+    //   console.log(cc(year.value));
+    //   console.log(yy(year.value));
 
-  if (getDay(first, second, third, fourth) === 0)
-    return (result.innerText = "sunday");
-  if (getDay(first, second, third, fourth) === 1)
-    return (result.innerText = "monday");
-  if (getDay(first, second, third, fourth) === 2)
-    return (result.innerText = "tuesday");
-  if (getDay(first, second, third, fourth) === 3)
-    return (result.innerText = "wednesday");
-  if (getDay(first, second, third, fourth) === 4)
-    return (result.innerText = "thursday");
-  if (getDay(first, second, third, fourth) === 5)
-    return (result.innerText = "friday");
-  if (getDay(first, second, third, fourth) === 6)
-    return (result.innerText = "saturday");
-  else {
-    return (result.innerText = "error");
+    //   event.preventDefault();
+  } else {
+    const akanName = document.getElementById("akan-name");
+    dweek.className = "text-danger";
+    dweek.innerText = "Please enter a valid input ";
+    result.innerText = "";
+    akan.innerText = "";
+    akanName.innerText = "";
   }
-  //   console.log(cc(year.value));
-  //   console.log(yy(year.value));
-
-  //   event.preventDefault();
 });
