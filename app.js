@@ -27,24 +27,36 @@ const yy = (y) => {
 //function to get the day of the month
 const getDay = (cc, yy, mm, dd) => {
   return Math.floor(
-    (cc / 4 - 2 * cc - 1 + (5 * yy) / 4 + (26 * (mm + 1)) / 10 + dd) % 7
+    (cc / 4 - 2 * (cc - 1) + (5 * yy) / 4 + (26 * (mm + 1)) / 10 + dd) % 7
   );
 };
 const year = document.getElementById("year");
 const month = document.getElementById("month");
+const result = document.getElementById("result");
+const date = document.getElementById("date");
+
 button.addEventListener("click", function (e) {
   var first = cc(year.value);
   var second = yy(year.value);
   var third = month.value;
-  if (getDay(first, second, third, 17) === 0) return console.log("sunday");
-  if (getDay(first, second, third, 17) === 1) return console.log("monday");
-  if (getDay(first, second, third, 17) === 2) return console.log("tuesday");
-  if (getDay(first, second, third, 17) === 3) return console.log("wednesday");
-  if (getDay(first, second, third, 17) === 4) return console.log("thursday");
-  if (getDay(first, second, third, 17) === 5) return console.log("friday");
-  if (getDay(first, second, third, 17) === 6) return console.log("saturday");
+  var fourth = date.value;
+
+  if (getDay(first, second, third, fourth) === 0)
+    return (result.innerText = "sunday");
+  if (getDay(first, second, third, fourth) === 1)
+    return (result.innerText = "monday");
+  if (getDay(first, second, third, fourth) === 2)
+    return (result.innerText = "tuesday");
+  if (getDay(first, second, third, fourth) === 3)
+    return (result.innerText = "wednesday");
+  if (getDay(first, second, third, fourth) === 4)
+    return (result.innerText = "thursday");
+  if (getDay(first, second, third, fourth) === 5)
+    return (result.innerText = "friday");
+  if (getDay(first, second, third, fourth) === 6)
+    return (result.innerText = "saturday");
   else {
-    return console.log("error");
+    return (result.innerText = "error");
   }
   //   console.log(cc(year.value));
   //   console.log(yy(year.value));
