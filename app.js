@@ -53,6 +53,7 @@ button.addEventListener("click", function (e) {
     datevalue <= 31
     // true == true
   ) {
+    dweek.className = "";
     if (gendervalue == "Male") {
       dweek.innerText = "";
       if (getDay(century, yearvalue, monthvalue, datevalue) === 0) {
@@ -145,9 +146,10 @@ button.addEventListener("click", function (e) {
     }
   } else {
     const akanName = document.getElementById("akan-name");
-    dweek.className = "text-danger mt-5";
-    alert("invalid input make sure the inputs are correct");
-    dweek.innerText = "Please make sure your birth dates are correct";
+    dweek.className = "alert alert-danger font-weight-normal mb-3";
+    // alert("invalid input make sure the inputs are correct");
+    dweek.innerText =
+      "Some of the fields are empty or invalid  make sure your inputs are correct ";
     result.innerText = "";
     akan.innerText = "";
     // akanName.innerTex = "";
