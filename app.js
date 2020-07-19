@@ -150,6 +150,6 @@ button.addEventListener("click", function (e) {
     dweek.innerText = "Please make sure your birth dates are correct";
     result.innerText = "";
     akan.innerText = "";
-    // akanName.innerText = "";
+    // akanName.innerTex = "";
   }
 });
