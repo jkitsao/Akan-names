@@ -54,6 +54,7 @@ button.addEventListener("click", function (e) {
     // true == true
   ) {
     if (gendervalue == "Male") {
+      dweek.innerText = "";
       if (getDay(century, yearvalue, monthvalue, datevalue) === 0) {
         //  block of code to be executed if condition1 is true
         result.innerText = "you were born on a  sunday";
@@ -97,6 +98,7 @@ button.addEventListener("click", function (e) {
 
       */
     } else if (gendervalue == "Female") {
+      dweek.innerText = "";
       if (getDay(century, yearvalue, monthvalue, datevalue) === 0) {
         //  block of code to be executed if condition1 is true
         result.innerText = "you were born on a  sunday";
@@ -143,10 +145,11 @@ button.addEventListener("click", function (e) {
     }
   } else {
     const akanName = document.getElementById("akan-name");
-    dweek.className = "text-danger";
-    dweek.innerText = "invalid input please check your input";
+    dweek.className = "text-danger mt-5";
+    alert("invalid input make sure the inputs are correct");
+    dweek.innerText = "Please make sure your birth dates are correct";
     result.innerText = "";
     akan.innerText = "";
-    akanName.innerText = "";
+    // akanName.innerText = "";
   }
 });
