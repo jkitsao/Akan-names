@@ -4,11 +4,11 @@
 
 <!-- ***Author :: Jackson kitsao*** -->
 
-# Akan name generator
+## Akan name generator 
 
-## Author [Jackson kitsao](https://github.com/jkitsao)
+### Author [Jackson kitsao](https://github.com/jkitsao) Also follow me on [twitter](www.twitter.com/Jacksonkitsao5)
 
-## Visit the site live [here](https://jkitsao.github.io/Akan-names/)
+#### Visit the site live [here](https://jkitsao.github.io/Akan-names/)
 
 > a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name. 
 
