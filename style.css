@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 body{
     /* background:linear-gradient(104.74deg, rgb(123, 66, 246) 0%, rgb(176, 30, 255) 100%); */
     background-color: black;
@@ -5,6 +6,10 @@ body{
 label{
     font-size: large;
     color:white;
+}
+h1{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2.2rem;
 }
  .section-form{
     height: 100vh;
@@ -16,6 +21,7 @@ label{
     h1{
         font-size: 2rem;
         margin-top: 1rem;
+        font-family: 'Open Sans Condensed', sans-serif;
     }
     .section-form{
         height: 100%;
