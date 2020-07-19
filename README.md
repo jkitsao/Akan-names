@@ -31,12 +31,17 @@
 First, Git clone the repo:
 
 ```bash
-Git clone 
-# or
-yarn dev
+Git clone https://github.com/jkitsao/Akan-names.git
+# and
+cd Akan-names
+code .
+# open with live server
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Open [http://localhost:5500](http://localhost:5500) with your browser to see the result.
+
+You can start editing the page by modifying `index.html`. The page auto-updates as you edit the file.
+
+## Happy hacking
 
