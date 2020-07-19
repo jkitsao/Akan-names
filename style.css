@@ -38,7 +38,7 @@ label{
         max-width: 100%;
         margin-top: 3rem;
       }
-      .card {
+      .card-c {
      
         position: relative;
         background: #333333;
@@ -55,7 +55,7 @@ label{
 /* Reset */
 .card__image-container img {
     width: 100%;
-    height: 23rem;
+    height: 100%;
   }
   #result{
       font-size: 2rem;
@@ -69,10 +69,10 @@ label{
     justify-content: center;
     height: 70%;
     background: rgb(108, 107, 110);
-    max-width: 60%;
+    max-width: 90%;
     margin-top: 3rem;
   }
-  .card {
+  .card-c {
      
     position: relative;
     background: #333333;
