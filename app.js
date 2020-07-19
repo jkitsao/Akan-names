@@ -53,96 +53,92 @@ button.addEventListener("click", function (e) {
     datevalue <= 31
     // true == true
   ) {
-    // const akanName = document.getElementById("akan-name");
-    // dweek.innerText = " ";
-    // akanName.innerText = "";
-    if (gendervalue == "Female") {
-      if (
-        getDay(century, yearvalue, monthvalue, datevalue) === 0 &&
-        gendervalue === "Male"
-      ) {
+    if (gendervalue == "Male") {
+      if (getDay(century, yearvalue, monthvalue, datevalue) === 0) {
+        //  block of code to be executed if condition1 is true
         result.innerText = "you were born on a  sunday";
         akan.innerText = "your Akan name is Kwasi";
         greet.innerText = "hello there Kwasi";
-      }
-
-      if (getDay(century, yearvalue, monthvalue, datevalue) === 1) {
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 1) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
         result.innerText = "you were born on a  monday";
         akan.innerText = "your Akan name is Kwadwo";
         greet.innerText = "hello there Kwadwo";
-      }
-      if (getDay(century, yearvalue, monthvalue, datevalue) === 2) {
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 2) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
         result.innerText = "you were born on a  Tuesday";
         akan.innerText = "your Akan name is Kwabena";
         greet.innerText = "hello there Kwabena";
-      }
-
-      if (getDay(century, yearvalue, monthvalue, datevalue) === 3) {
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 3) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
         result.innerText = "you were born on a  wednesday";
         akan.innerText = "your Akan name is Kwaku";
         greet.innerText = "hello there Kwaku";
-      }
-
-      if (getDay(century, yearvalue, monthvalue, datevalue) === 4) {
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 4) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
         result.innerText = "you were born on a  Thursday";
         akan.innerText = "your Akan name is Yaw";
         greet.innerText = "hello there yaw";
-      }
-      if (getDay(century, yearvalue, monthvalue, datevalue) === 5) {
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 5) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
         result.innerText = "you were born on a  Friday";
         akan.innerText = "your Akan name is Kofi";
         greet.innerText = "hello there Kofi";
-      }
-
-      if (getDay(century, yearvalue, monthvalue, datevalue) === 6) {
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 6) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
         result.innerText = "you were born on a  Saturday";
         akan.innerText = "your Akan name is Kwame";
         greet.innerText = "hello there Kwame";
       }
-      //female logic goes here
-      else if (gendervalue == "Female") {
-        if (
-          getDay(century, yearvalue, monthvalue, datevalue) === 0 &&
-          gendervalue === "Male"
-        ) {
-          result.innerText = "you were born on a  sunday";
-          akan.innerText = "your Akan name is Kwasi";
-          greet.innerText = "hello there Kwasi";
-        }
+      /*
+      statement below
+      will be executed if the
+      gender value is female
 
-        if (getDay(century, yearvalue, monthvalue, datevalue) === 1) {
-          result.innerText = "you were born on a  monday";
-          akan.innerText = "your Akan name is Kwadwo";
-          greet.innerText = "hello there Kwadwo";
-        }
-        if (getDay(century, yearvalue, monthvalue, datevalue) === 2) {
-          result.innerText = "you were born on a  Tuesday";
-          akan.innerText = "your Akan name is Kwabena";
-          greet.innerText = "hello there Kwabena";
-        }
-
-        if (getDay(century, yearvalue, monthvalue, datevalue) === 3) {
-          result.innerText = "you were born on a  wednesday";
-          akan.innerText = "your Akan name is Kwaku";
-          greet.innerText = "hello there Kwaku";
-        }
-
-        if (getDay(century, yearvalue, monthvalue, datevalue) === 4) {
-          result.innerText = "you were born on a  Thursday";
-          akan.innerText = "your Akan name is Yaw";
-          greet.innerText = "hello there yaw";
-        }
-        if (getDay(century, yearvalue, monthvalue, datevalue) === 5) {
-          result.innerText = "you were born on a  Friday";
-          akan.innerText = "your Akan name is Kofi";
-          greet.innerText = "hello there Kofi";
-        }
-
-        if (getDay(century, yearvalue, monthvalue, datevalue) === 6) {
-          result.innerText = "you were born on a  Saturday";
-          akan.innerText = "your Akan name is Kwame";
-          greet.innerText = "hello there Kwame";
-        }
+      */
+    } else if (gendervalue == "Female") {
+      if (getDay(century, yearvalue, monthvalue, datevalue) === 0) {
+        //  block of code to be executed if condition1 is true
+        result.innerText = "you were born on a  sunday";
+        akan.innerText = "your Akan name is Akosua";
+        greet.innerText = "hello there Akosua";
+        console.log("hello");
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 1) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
+        result.innerText = "you were born on a  monday";
+        akan.innerText = "your Akan name is Adwoa";
+        greet.innerText = "hello there Adwoa";
+        console.log("hello");
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 2) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
+        result.innerText = "you were born on a  Tuesday";
+        akan.innerText = "your Akan name is Abenna";
+        greet.innerText = "hello there Abenna";
+        console.log("hello");
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 3) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
+        result.innerText = "you were born on a  wednesday";
+        akan.innerText = "your Akan name is Akua";
+        greet.innerText = "hello there Akua";
+        console.log("hello");
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 4) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
+        result.innerText = "you were born on a  Thursday";
+        akan.innerText = "your Akan name is Yaa";
+        greet.innerText = "hello there yaa";
+        console.log("hello");
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 5) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
+        result.innerText = "you were born on a  Friday";
+        akan.innerText = "your Akan name is Afua";
+        greet.innerText = "hello there Afua";
+        console.log("hello");
+      } else if (getDay(century, yearvalue, monthvalue, datevalue) === 6) {
+        //  block of code to be executed if the condition1 is false and condition2 is true
+        result.innerText = "you were born on a  Saturday";
+        akan.innerText = "your Akan name is Ama ";
+        greet.innerText = "hello there Ama";
+        console.log("hello");
       }
     }
   } else {
