@@ -6,11 +6,52 @@ label{
     font-size: large;
     color:white;
 }
-.section-form{
+ .section-form{
     height: 100vh;
     display: flex;
     background-color: black;
-}
+} 
+ /* @media only()  */
+@media only screen and (max-width: 1000px) {
+    h1{
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .section-form{
+        height: 100%;
+        display: block;
+        background-color: black;
+        margin: 0;
+    }
+    .form-secton{
+        max-width: 100%;
+    }
+    .form-secton form{
+        width: 100%;
+    }
+    .contain {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70%;
+        background: rgb(108, 107, 110);
+        max-width: 100%;
+        margin-top: 3rem;
+      }
+      .card {
+     
+        position: relative;
+        background: #333333;
+        width: 100%;
+        height: 90%;
+        border-radius: 6px;
+        padding: 2rem;
+        color: #aaa;
+        box-shadow: 10px 10px 5px 0px rgb(240, 178, 98);
+        overflow: hidden;
+      }
+    
+  } 
 /* Reset */
 .card__image-container img {
     width: 100%;
@@ -22,20 +63,20 @@ label{
   #dweek{
       font-size: 1.3rem;
   }
-  .container {
+  .contain {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 70%;
-    background: rgb(8, 1, 37);
-    max-width: 40%;
+    background: rgb(108, 107, 110);
+    max-width: 60%;
     margin-top: 3rem;
   }
   .card {
      
     position: relative;
     background: #333333;
-    width: 85%;
+    /* width: 95%; */
     height: 90%;
     border-radius: 6px;
     padding: 2rem;
