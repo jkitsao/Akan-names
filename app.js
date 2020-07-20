@@ -38,10 +38,13 @@ button.addEventListener("click", function (e) {
 
   if (
     year.value.length === 4 &&
+    year.value.length % 1 == 0 &&
     monthvalue > 0 &&
+    monthvalue % 1 == 0 &&
     monthvalue <= 12 &&
     datevalue > 0 &&
-    datevalue <= 31
+    datevalue <= 31 &&
+    datevalue % 1 == 0
   ) {
     dweek.className = "";
     if (gendervalue == "Male") {

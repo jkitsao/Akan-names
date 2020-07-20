@@ -16,7 +16,7 @@
 
 ## Tech stack used for development
 
-> Different aspects of technology that poer the website
+> Different aspects of technology that power the website
 
 | Tecnology used&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description                                                        |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
